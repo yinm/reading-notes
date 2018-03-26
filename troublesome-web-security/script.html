@@ -6,29 +6,14 @@
 </head>
 <body>
 <script>
-  let i = 1
-
-  function not_called() {
-    return 42
+  const evilObject = {
+    set foo(a) { alert('Gotcha!') },
+    get foo() { return 2 }
   }
 
-  function hello_world() {
-    console.log(i++)
-    alert('With this program, anything is possible!')
-    do_stuff()
-  }
+  evilObject.foo = 1
 
-  alert('Welcome to our demo application.')
-
-  hello_world()
-
-  alert('Thank you, come again.')
-</script>
-
-<script>
-  alert('Now that you')
-
-  hello_world()
+  if (evilObject.foo != 1) alert("What's going on?!")
 </script>
 </body>
 </html>
