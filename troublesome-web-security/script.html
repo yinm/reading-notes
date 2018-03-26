@@ -6,14 +6,21 @@
 </head>
 <body>
 <script>
-  const evilObject = {
-    set foo(a) { alert('Gotcha!') },
-    get foo() { return 2 }
+  const impromptuObject = {
+    "given_name": "John",
+    "family_name": "Smith",
+    "lucky_numbers": [11630, 12067, 12407, 12887]
   }
 
-  evilObject.foo = 1
+  alert(impromptuObject.given_name)
+</script>
 
-  if (evilObject.foo != 1) alert("What's going on?!")
+<script>
+  {
+    "given_name": "John",
+    "family_name": "Smith",
+    "lucky_numbers": [11630, 12067, 12407, 12887]
+  }
 </script>
 </body>
 </html>
